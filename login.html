@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - 1st Year Notes</title>
+
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-title">Secure Login</div>
+      <div class="login-subtitle">
+        Only authorised students can access notes & downloads.
+      </div>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="userId">College ID / Email</label>
+          <input type="text" id="userId" placeholder="Enter your ID or email" required />
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+
+        <div class="login-error" id="loginError"></div>
+      </form>
+
+      <div class="login-footer">
+        <a href="index.html">← Back to main site</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

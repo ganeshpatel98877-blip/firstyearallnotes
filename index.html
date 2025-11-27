@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <script>
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+  <meta charset="UTF-8" />
+  <title>All Notes of 1st Year</title>
+
+  <script>
+    // Agar login nahi hai to login page par redirect
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+    
+  </script>
+
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+  <meta charset="UTF-8" />
+  <title>All Notes of 1st Year</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <div style="text-align:right; padding:10px; font-size:0.9rem;">
+  <a href="ai-chat.html" style="color:#0c3c78; text-decoration:none;">
+    🤖 AI Study Assistant
+  </a>
+</div>
+
+  <div style="text-align:right; padding:10px;">
+  <a href="login.html" style="font-size:14px; color:#0c3c78; text-decoration:none;">
+    🔐 Login
+  </a>
+</div>
+
+  <div class="container">
+    <div class="logo-title">All Notes of 1st Year</div>
+    <div class="logo-sub">
+      All subjects, notes, important topics & PYQ at one place
+    </div>
+
+    <div class="search-box">
+      <input id="searchInput" type="text" placeholder="Search subject, code, or topic..." />
+      <button type="button" id="searchBtn">Search</button>
+      <button onclick="logout()" style="
+background:#1f3b57;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+margin:10px;">
+Logout
+</button>
+<script>
+  function logout(){
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "login.html";
+  }
+</script>
+
+    </div>
+
+    <!-- Subjects Grid -->
+    <div id="notesGrid" class="notes-grid">
+
+      <!-- 1. Electronic Mechanics (EM) -->
+      <div class="note-card"
+           data-keywords="electronic mechanics em motion devices sensors semiconductors">
+        <h3>Electronic Mechanics (EM)</h3>
+        <p>Mechanics concepts used in electronics: motion systems, sensors, actuators and basic semiconductor-related mechanics.</p>
+        <span class="note-tag">Technical</span>
+        <div class="note-actions">
+          <a class="note-btn" href="em-notes.html">Notes</a>
+          <a class="note-btn secondary" href="em-important.html">Important topics</a>
+          <a class="note-btn secondary" href="em-pyq.html">PYQ papers</a>
+        </div>
+      </div>
+
+      <!-- 2. Applied Chemistry (AC) -->
+      <div class="note-card"
+           data-keywords="applied chemistry ac engineering reactions lab formula industrial">
+        <h3>Applied Chemistry (AC)</h3>
+        <p>Chemical reactions, industrial chemistry basics, engineering applications and useful lab concepts.</p>
+        <span class="note-tag">Core Subject</span>
+        <div class="note-actions">
+          <a class="note-btn" href="ac-notes.html">Notes</a>
+          <a class="note-btn secondary" href="ac-important.html">Important topics</a>
+          <a class="note-btn secondary" href="ac-pyq.html">PYQ papers</a>
+        </div>
+      </div>
+
+      <!-- 3. Basic Electrical Engineering (BEE) -->
+      <div class="note-card"
+           data-keywords="basic electrical bee circuits ohms law kirchhoff ac dc machines transformers">
+        <h3>Basic Electrical Engineering (BEE)</h3>
+        <p>AC/DC basics, Ohm's law, circuit theory, transformers, and numerical questions.</p>
+        <span class="note-tag">Numerical Based</span>
+        <div class="note-actions">
+          <a class="note-btn" href="bee-notes.html">Notes</a>
+          <a class="note-btn secondary" href="bee-important.html">Important topics</a>
+          <a class="note-btn secondary" href="bee-pyq.html">PYQ papers</a>
+        </div>
+      </div>
+
+      <!-- 4. Communication English (CE) -->
+      <div class="note-card"
+           data-keywords="communication english ce grammar letter writing speaking vocabulary">
+        <h3>Communication English (CE)</h3>
+        <p>Spoken and written English skills, grammar, letters, emails and vocabulary.</p>
+        <span class="note-tag">Soft Skills</span>
+        <div class="note-actions">
+          <a class="note-btn" href="ce-notes.html">Notes</a>
+          <a class="note-btn secondary" href="ce-important.html">Important topics</a>
+          <a class="note-btn secondary" href="ce-pyq.html">PYQ papers</a>
+        </div>
+      </div>
+
+      <!-- 5. Calculus -->
+      <div class="note-card"
+           data-keywords="calculus limits differentiation integration maths">
+        <h3>Calculus</h3>
+        <p>Limits, differentiation, integration, and other basic calculus concepts.</p>
+        <span class="note-tag">Common Subject</span>
+        <div class="note-actions">
+          <a class="note-btn" href="calculus-notes.html">Notes</a>
+          <a class="note-btn secondary" href="calculus-important.html">Important topics</a>
+          <a class="note-btn secondary" href="calculus-pyq.html">PYQ papers</a>
+        </div>
+      </div>
+
+      <!-- 6. FME -->
+      <div class="note-card"
+           data-keywords="fundamental mechanical engineering fme thermodynamics machines workshop">
+        <h3>Fundamental of Mechanical Engineering (FME)</h3>
+        <p>Basics of mechanical systems, thermodynamics, machines and workshop-related topics.</p>
+        <span class="note-tag">Engineering Core</span>
+        <div class="note-actions">
+          <a class="note-btn" href="fme-notes.html">Notes</a>
+          <a class="note-btn secondary" href="fme-important.html">Important topics</a>
+          <a class="note-btn secondary" href="fme-pyq.html">PYQ papers</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="noResult" class="no-result">
+      No subject found for this search. Try another keyword.
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-title">Contact us</div>
+
+      <div>📞 Phone:
+        <a href="tel:+910000000000">+91-00000-00000</a>
+      </div>
+      <div>✉️ Email:
+        <a href="mailto:youremail@example.com">youremail@example.com</a>
+      </div>
+
+      <div class="contact-links">
+        <a href="https://wa.me/910000000000" target="_blank">
+          <span class="icon">💬</span>
+          <span>WhatsApp</span>
+        </a>
+        <a href="https://instagram.com/yourchannel" target="_blank">
+          <span class="icon">📸</span>
+          <span>Instagram</span>
+        </a>
+      </div>
+
+      <div class="footer-small">
+        Note: Apna real number, email, WhatsApp link aur Instagram channel yahan par replace kar lena.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Helper - 1st Year Notes</title>
+
+  <link rel="stylesheet" href="css/ai-chat.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="top-bar">
+      <div class="logo">
+        <a href="index.html">← Back to Notes</a>
+      </div>
+      <div class="title">AI Study Assistant</div>
+    </header>
+
+    <main class="chat-wrapper">
+      <div class="chat-box" id="chatBox">
+        <!-- Messages yahan JS se add honge -->
+        <div class="msg bot">
+          <div class="msg-bubble">
+            Hi 👋 Main tumhara AI study assistant hoon.  
+            Tum mujhe subjects, formulas, important topics, ya PYQ ke baare me kuch bhi puch sakte ho.
+          </div>
+        </div>
+      </div>
+
+      <form id="chatForm" class="chat-input-area">
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Type your question here... (e.g. 'EM ke important topics batao')"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="js/ai-chat.js"></script>
+</body>
+</html>
