@@ -1,72 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <head>
-    <script>
-  if (localStorage.getItem("isLoggedIn") !== "true") {
-    window.location.href = "login.html";
-  }
-</script>
-
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>All Notes of 1st Year</title>
-
+  <link rel="stylesheet" href="css/index.css" />
   <script>
-    // Agar login nahi hai to login page par redirect
     if (localStorage.getItem("isLoggedIn") !== "true") {
       window.location.href = "login.html";
     }
-    
   </script>
-
-  <link rel="stylesheet" href="css/index.css" />
-</head>
-
-  <meta charset="UTF-8" />
-  <title>All Notes of 1st Year</title>
-
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-  <div style="text-align:right; padding:10px; font-size:0.9rem;">
-  <a href="ai-chat.html" style="color:#0c3c78; text-decoration:none;">
-    🤖 AI Study Assistant
-  </a>
-</div>
-
-  <div style="text-align:right; padding:10px;">
-  <a href="login.html" style="font-size:14px; color:#0c3c78; text-decoration:none;">
-    🔐 Login
-  </a>
-</div>
-
-  <div class="container">
-    <div class="logo-title">All Notes of 1st Year</div>
-    <div class="logo-sub">
-      All subjects, notes, important topics & PYQ at one place
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">FY</div>
+      <div>
+        <div class="brand-title">All Notes of 1st Year</div>
+        <div class="brand-subtitle">All subjects, notes, important topics & PYQ in one place</div>
+      </div>
     </div>
+    <nav class="header-actions">
+      <a class="header-link" href="ai-chat.html">🤖 AI Study Assistant</a>
+      <a class="header-link" href="login.html">🔐 Login</a>
+      <button class="logout-btn" type="button" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Find the right notes in seconds</h1>
+        <p>Search by subject, code, or topic and jump straight into study material curated for first-year students.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-stat">
+          <span class="hero-stat-label">Subjects covered</span>
+          <span class="hero-stat-value">6</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-label">Updated for</span>
+          <span class="hero-stat-value">2024</span>
+        </div>
+      </div>
+    </section>
 
     <div class="search-box">
       <input id="searchInput" type="text" placeholder="Search subject, code, or topic..." />
       <button type="button" id="searchBtn">Search</button>
-      <button onclick="logout()" style="
-background:#1f3b57;
-color:white;
-border:none;
-padding:6px 12px;
-border-radius:6px;
-cursor:pointer;
-margin:10px;">
-Logout
-</button>
-<script>
-  function logout(){
-    localStorage.removeItem("isLoggedIn");
-    window.location.href = "login.html";
-  }
-</script>
-
     </div>
 
     <!-- Subjects Grid -->
@@ -154,7 +135,7 @@ Logout
     <div id="noResult" class="no-result">
       No subject found for this search. Try another keyword.
     </div>
-  </div>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -185,7 +166,12 @@ Logout
     </div>
   </footer>
 
-  <!-- Main JS -->
   <script src="js/index.js"></script>
+  <script>
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
 </body>
 </html>
