@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Electronic Mechanics (EM) - Notes</title>
-
+  <link rel="stylesheet" href="css/subject.css" />
   <script>
-    // Global protection: bina login ke page nahi khulega
     if (localStorage.getItem("isLoggedIn") !== "true") {
       window.location.href = "login.html";
     }
   </script>
-
-  <link rel="stylesheet" href="css/em-notes.css" />
-</head>
-<body>
-  ...
-</body>
-</html>
-
-  <meta charset="UTF-8" />
-  <title>Electronic Mechanics (EM) - Notes</title>
-
-  <link rel="stylesheet" href="css/em-notes.css" />
 </head>
 <body>
   <div class="wrapper">
@@ -40,37 +25,33 @@
     </div>
 
     <div class="subject-meta">
-      1st Year · Electronic Mechanics · Add your unit-wise notes, explanations and PDFs here.
+      1st Year · Electronic Mechanics · Add your unit-wise notes, explanations, and PDFs here.
     </div>
 
-    <!-- Example Unit 1 -->
-    <div class="note-section">
+    <section class="section-card">
       <h3>Unit 1: Basics of mechanics in electronics</h3>
       <ul>
-        <li>Introduction to force, motion and basic terminology.</li>
+        <li>Introduction to force, motion, and basic terminology.</li>
         <li>Mechanical arrangements used in electronic systems.</li>
-        <li>Derivations / formulae (yahan tum apna content likh sakte ho).</li>
+        <li>Key derivations and formulas for quick revision.</li>
       </ul>
       <div class="links-row">
-        <a href="#" target="_blank">📄 Open Unit 1 PDF</a>
-        <a href="#" target="_blank">📁 Open Unit 1 Drive folder</a>
+        <a href="#" target="_blank" rel="noreferrer">📄 Open Unit 1 PDF</a>
+        <a href="#" target="_blank" rel="noreferrer">📁 Open Unit 1 Drive folder</a>
       </div>
-    </div>
+    </section>
 
-    <!-- Example Unit 2 -->
-    <div class="note-section">
+    <section class="section-card">
       <h3>Unit 2: Sensors and actuators</h3>
       <ul>
         <li>Classification of sensors.</li>
-        <li>Basic working of actuators.</li>
-        <li>Applications & diagrams.</li>
+        <li>Working principles of actuators.</li>
+        <li>Applications and circuit diagrams.</li>
       </ul>
       <div class="links-row">
-        <a href="#" target="_blank">📄 Open Unit 2 PDF</a>
+        <a href="#" target="_blank" rel="noreferrer">📄 Open Unit 2 PDF</a>
       </div>
-    </div>
-
-    <!-- Aur units add kar sakte ho -->
+    </section>
   </div>
 
   <script src="js/em-notes.js"></script>

@@ -2,26 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI Helper - 1st Year Notes</title>
-
   <link rel="stylesheet" href="css/ai-chat.css" />
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
 </head>
 <body>
   <div class="page-wrapper">
     <header class="top-bar">
-      <div class="logo">
-        <a href="index.html">← Back to Notes</a>
-      </div>
+      <a href="index.html" class="back-link">← Back to Notes</a>
       <div class="title">AI Study Assistant</div>
+      <span class="status-pill">Online</span>
     </header>
 
     <main class="chat-wrapper">
       <div class="chat-box" id="chatBox">
-        <!-- Messages yahan JS se add honge -->
         <div class="msg bot">
           <div class="msg-bubble">
-            Hi 👋 Main tumhara AI study assistant hoon.  
-            Tum mujhe subjects, formulas, important topics, ya PYQ ke baare me kuch bhi puch sakte ho.
+            Hi 👋 Main tumhara AI study assistant hoon. Tum mujhe subjects, formulas, important topics, ya PYQ ke baare me kuch bhi puch sakte ho.
           </div>
         </div>
       </div>
